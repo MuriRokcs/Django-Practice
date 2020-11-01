@@ -18,8 +18,9 @@ posts = [
 ]
 # Create your views here.
 def home(request):
+    #Context is passed to the templating engine, you can pass whatever you want there.
     context = {
-        'posts': posts
+        'posts': posts,
     }
     return render(request, 'blog/home.html', context=context)
 
