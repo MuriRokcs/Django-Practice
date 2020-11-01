@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post
 
 #add fake data to populate the app pages
 posts = [
@@ -20,7 +21,7 @@ posts = [
 def home(request):
     #Context is passed to the templating engine, you can pass whatever you want there.
     context = {
-        'posts': posts,
+        'posts': Post.objects.all(),
     }
     return render(request, 'blog/home.html', context=context)
 
