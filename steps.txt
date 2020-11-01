@@ -1,0 +1,4 @@
+
+create some routes
+create templates!
+add app to settings
